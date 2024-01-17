@@ -1,0 +1,5 @@
+***DIALOGUE
+Well could a shitty wizard do THIS?
+Surely enough, your magic wand sparks and whines, and fizzles impotently in your hand. A few metres in front of you an innocent frog croaks its last and rolls over sideways. There is no way to tell if this was your doing, so you flourish your robe and assume it was.
+***CHOICES
+0:Turn and leave to exactly the same spot you are already standing.

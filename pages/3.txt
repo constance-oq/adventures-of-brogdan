@@ -1,0 +1,4 @@
+***DIALOGUE
+You find a crossroads, but the developer is running out of ideas.
+***CHOICES
+0:Return the way you came.

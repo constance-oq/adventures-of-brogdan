@@ -1,0 +1,8 @@
+***DIALOGUE
+Your name is Brogdan, and you are a very shitty wizard. You stand in the middle of a forest in an absent-minded stupor, wondering what it is you came out here for.
+Looking around you spy to the west your Wizard's Tower, pointing crookedly to the sky out of the treeline. To the north and east are trails into the forest.
+***CHOICES
+1:Go west, back home.
+2:Go north.
+3:Go east.
+4:Cast a spell.

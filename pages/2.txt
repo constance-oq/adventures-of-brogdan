@@ -1,0 +1,6 @@
+***DIALOGUE
+You get lost in the forest. A bear charges you. You flail around helplessly as you are mauled to death. Before you die the bear is polite enough to tell you how to quit the game.
+"Type 'exit' and press enter to exit!" it growls.
+You try to thank the bear but all that comes out is a pathetic blood gargle. You die.
+***CHOICES
+0: Come back to life anyway, and go back the way you came. The dev didn't implement dying yet...

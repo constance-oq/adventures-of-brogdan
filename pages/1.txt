@@ -1,0 +1,4 @@
+***DIALOGUE
+Well, there's your tower. Yep. You feel a shocking lack of purpose.
+***CHOICES
+0:...Wander off into the forest again.
