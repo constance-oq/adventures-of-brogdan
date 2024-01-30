@@ -5,4 +5,4 @@ Looking around you spy to the west your Wizard's Tower, pointing crookedly to th
 1:Go west, back home.
 2:Go north.
 3:Go east.
-4:Cast a spell.
+IF:HAS_WAND:1:4:Cast a spell.

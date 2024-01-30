@@ -17,10 +17,13 @@ blah
 #include <string>
 #include <cstring>
 
+#include "flags.cpp"
+
 std::string universal_error_text = "If you see this text, ping Zoe and tell her \"You are a very shitty wizard\"."; // Not you, dipshit. You're reading the source code.
 std::string dialogue = "";
 std::string choice_destinations[10] = {};
 std::string choice_text[10] = {};
+
 
 /*
 class parsing_error: public std::exception {
@@ -51,6 +54,53 @@ std::string read_file( std::string file_name ) {
 	}
 }
 
+void parse_flags( std::string unparsed_text ) {
+	int eof_pos = unparsed_text.length();
+	int pos1 = 0;
+	int pos2 = 0;
+
+	int result_find = 0;
+	result_find = unparsed_text.find( "***FLAGS\n" );
+	if ( result_find == std::string::npos ) {
+		return;
+	}
+	pos1 = result_find + strlen( "***FLAGS\n" );
+	
+	result_find = unparsed_text.find( "\n***" );
+	if ( result_find == std::string::npos ) {
+		pos2 = eof_pos;
+	} else {
+		pos2 = result_find;
+	}
+
+	std::string unparsed_flags = unparsed_text.substr( pos1, pos2 - pos1 );
+	pos1 = 0;
+
+	while ( true ) {
+		std::string flag_name;
+		int flag_value;
+		result_find = unparsed_flags.find( ":", pos1 );
+		if ( result_find == std::string::npos ) {
+			break;	// No more flags :)
+		}
+		pos2 = result_find;
+		flag_name = unparsed_flags.substr( pos1, pos2 - pos1 );
+
+		pos1 = pos2 + strlen( ":" );
+		result_find = unparsed_flags.find( "\n" );
+		if ( result_find == std::string::npos ) {
+			pos2 = eof_pos;
+		}
+		std::string result_substr = unparsed_flags.substr( pos1, pos2 - pos1 );
+		flag_value = std::stoi( result_substr );
+
+		flags::set( flag_name, flag_value );
+
+		pos1 = pos2 + strlen( "\n" );
+		if ( pos1 >= eof_pos ) { break; }
+	}
+}
+
 void parse_text( std::string unparsed_text ) {
 	// Parse text for dialogue and options.
 	int pos1 = 0;
@@ -65,7 +115,11 @@ void parse_text( std::string unparsed_text ) {
 		pos1 = result_find + strlen ( "***DIALOGUE\n" );
 
 		result_find = unparsed_text.find( "\n***", pos1 );
-		pos2 = result_find;
+		if ( result_find == std::string::npos ) {
+			pos2 = eof_pos;
+		} else {
+			pos2 = result_find;
+		}
 		dialogue = unparsed_text.substr( pos1, pos2 - pos1 );
 	}
 
@@ -78,45 +132,84 @@ void parse_text( std::string unparsed_text ) {
 	result_find = unparsed_text.find( "***CHOICES\n" );
 	if ( result_find == std::string::npos ) {
 		std::cout << "NO CHOICES FOUND. " + universal_error_text + "\n";
-	}
-	if ( result_find != std::string::npos ) {
+	} else {
 		pos1 = result_find + strlen( "***CHOICES\n" );
-		
+
+		result_find = unparsed_text.find( "\n***", pos1 );
+		if ( result_find == std::string::npos ) {
+			pos2 = eof_pos;
+		} else {
+			pos2 = result_find;
+		}
+		std::string unparsed_choices = unparsed_text.substr( pos1, pos2 - pos1 );
+		// pos1 and pos2 are now positions in unparsed_choices, NOT unparsed_text
+		pos1 = 0;
+		pos2 = 0;
+
 		int choice_i = 0;
 		while ( true ) {
 			// Find choice destination
-			result_find = unparsed_text.find( ":", pos1 );
+			result_find = unparsed_choices.find( ":", pos1 );
 			if ( result_find == std::string::npos ) {
-				// If first go round, parsing error: can't find any choices.
+				// If first go round, parsing error: Choices section is not populated.
 				// Else, choices must have ended.
 				break; 
 			}
 			pos2 = result_find;
-			/* Heed my warning!
-				Some moons from now, but not too many, there will be a great parsing error:
-				In which some unsuspecting folk or otherwise malicious evildoer shall place a
-				colon past the end of the CHOICES delimiter, whereafter a cataclysm
-				of speech shall occur. Ye will be offered the choice between "1. Cast a spell" or
-				"2. <chunk of ascii art>".
-			*/
-			choice_destinations[ choice_i ] = unparsed_text.substr( pos1, pos2 - pos1 );
-			
+			std::string result_substr = unparsed_choices.substr( pos1, pos2 - pos1 );
+
+			bool failed_conditional_flag = false;
+			if ( result_substr == "IF" ) {
+				// Conditional behaviour based on flags! :)
+				pos1 = pos2 + strlen( ":" );
+				// The following code is not safe for parsing errors. Refactor required.
+				// Retrieving result_find and detecting parse errors should be a function.
+				pos2 = unparsed_choices.find( ":", pos1 );
+				result_substr = unparsed_choices.substr( pos1, pos2 - pos1 ); 
+				int current_flag_value = flags::get( result_substr );
+
+				pos1 = pos2 + strlen( ":" );
+				pos2 = unparsed_choices.find( ":", pos1 );
+				result_substr = unparsed_choices.substr( pos1, pos2 - pos1 );
+				int compare_flag_value = std::stoi( result_substr );
+				
+				if ( current_flag_value != compare_flag_value ) {
+					failed_conditional_flag = true;
+				}
+
+				// Set up to read choice destination
+				pos1 = pos2 + strlen( ":" );
+				pos2 = unparsed_choices.find( ":", pos1 );
+				
+			}
+
+			if ( !failed_conditional_flag ) { // <-- Refactor required.
+				choice_destinations[ choice_i ] = result_substr;
+			}	
+
 			// Find choice text
 			pos1 = pos2 + strlen( ":" );
-			result_find = unparsed_text.find( "\n", pos1 );
+			result_find = unparsed_choices.find( "\n", pos1 );
 			if ( result_find == std::string::npos ) {
 				// Assume that this is the last line of the file.
 				pos2 = eof_pos;
 			} else {
 				pos2 = result_find;
 			}
-			choice_text[ choice_i ] = unparsed_text.substr( pos1, pos2 - pos1 );
+			if ( !failed_conditional_flag ) { // <-- Refactor required.
+				choice_text[ choice_i ] = unparsed_choices.substr( pos1, pos2 - pos1 );
+			}
 			pos1 = pos2 + strlen( "\n" );
 			if ( pos1 >= eof_pos ) { break; } // This is a success.
-			choice_i++;
+			if ( !failed_conditional_flag ) { // <-- Refactor required.
+				choice_i++;
+			}
 		}
 	}
+	parse_flags( unparsed_text );
 }
+
+
 
 void load_page( std::string file ) {
 	std::string unparsed_text = read_file( file );		
@@ -177,6 +270,7 @@ int main() {
 
 	// legacy code :^)
 	// std::cout << "You are a very shitty wizard.\n";
+
 	return 0;
 }
 

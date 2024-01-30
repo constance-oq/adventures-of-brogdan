@@ -1,9 +1,0 @@
-***DIALOGUE
-blahblahblah
-***CHOICES
-	1:blah
-	2:blah
-	foobar:blah
-***FLAGS
-***ART
-***ANIMATION

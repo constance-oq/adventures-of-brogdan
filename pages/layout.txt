@@ -1,9 +1,15 @@
 ***DIALOGUE
-blahblahblah
+blahblahblah. this is a bunch of dialogue.
+may include any characters except the triple asterisk delimiter.
+amazing!
 ***CHOICES
 1:blah
 2:blah
 foobar:blah
+<destination>:<choice description>
+IF:HAS_WAND:1:by_the_river:Walk to the riverside.
+IF:<flag name>:<flag value to compare>:<destination>:<choice_description>
 ***FLAGS
-***ART
-***ANIMATION
+QUEST_PROGRESS:5
+HAS_WAND:1
+<flag name>:<integer>

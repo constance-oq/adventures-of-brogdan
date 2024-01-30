@@ -1,5 +1,0 @@
-***DIALOGUE
-Foo!
-***CHOICES
-11:This is option 1.
-12:This is option 2.
