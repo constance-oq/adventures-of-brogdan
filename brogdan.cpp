@@ -24,21 +24,6 @@ std::string dialogue = "";
 std::string choice_destinations[10] = {};
 std::string choice_text[10] = {};
 
-
-/*
-class parsing_error: public std::exception {
-	public:
-		char* what() const throw() {
-			return "Parsing error.";
-		}
-};
-
-class file_open_error: public std::exception {
-	public:
-		char* what() const throw() {
-			return "Unable to open file".
-*/
-
 std::string read_file( std::string file_name ) {
 	//Read file at file_name to a string
 	std::ifstream myfile( file_name );
@@ -273,9 +258,4 @@ int main() {
 
 	return 0;
 }
-
-//WHEREAMI:
-/* Compile this shit in an easy-to-open format. No terminal necessary.
-*/
-
 
