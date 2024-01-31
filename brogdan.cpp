@@ -2,14 +2,6 @@
 
 A text adventure game by Zoe
 
-dialogue
-blahblah
-blah
-***
-	11:option a
-	12:option b
-	35:option c
-
 */
 
 #include <iostream>
