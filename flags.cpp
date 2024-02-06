@@ -1,5 +1,7 @@
 #include "flags.h"
 
+std::map< std::string, int > flags::flags_map;
+
 void flags::set( std::string flag_name, int flag_value ) {
 	flags_map[ flag_name ] = flag_value;
 }
