@@ -1,0 +1,8 @@
+***DIALOGUE
+The moment your hand touches the first rung of the ladder it falls off in your hand. On the inside face of the rung is engraved "MUNICIPAL ASSOCIATION OF PLANNED OBSOLESCENCE". In your shameful lack of height you are unable to reach the second rung.
+
+You bury the useless first rung somewhere in the folds of your robe.
+***CHOICES
+dungeon_start:(Back)
+***FLAGS
+HAS_LADDER_RUNG:1

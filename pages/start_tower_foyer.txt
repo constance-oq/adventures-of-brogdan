@@ -1,0 +1,9 @@
+***DIALOGUE
+Home sweet home! You enter the foyer, which is really more of a lounge room. You call it a foyer though, both in your head and to the very occasional guest.
+A spiral staircase follows the perimiter of the cylindrical room, hugging the slanted wall and leading up into the kitchen. Underneath the stairs sits a dilapidated green couch and bedside table with a lamp on it. A coatrack beside you and the entrance is adorned with various novelty hats you've collected from campus parties. Various cardboard boxes, smut magazines, junk, and a set of plate armor on a stand fill the corners. Or, well, the 'recesses'. Again this room is roughly cylindrical.
+***CHOICES
+start_tower_outside:Exit the front door.
+start_tower_kitchen:Climb the stairs to the kitchen.
+start_tower_smut:Read some smut.
+start_tower_armor:Put on the plate armor!
+IF:HAS_WAND:0:start_tower_foyer_wand:Search for your wand in the mess.

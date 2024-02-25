@@ -1,0 +1,4 @@
+***DIALOGUE
+You don't have your trusty wand!
+***CHOICES
+start_middle_of_forest:(Back)

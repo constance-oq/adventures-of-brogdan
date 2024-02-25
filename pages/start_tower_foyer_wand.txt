@@ -1,0 +1,6 @@
+***DIALOGUE
+You dig through the pile of random junk looking for your magical Wizard's Wand.
+You almost fall headfirst into the assorted knick-knacks, but catch yourself and chuckle with relief. 'Someone really ought to clean this place up!' you think.
+In your self-absorbed little moment of charm you step on a plastic skateboard, and then you really DO fall headfirst into the assorted knick-knacks. Your legs flail uselessly as you are swallowed into the depths.
+***CHOICES
+dungeon_falldown:(Continue)

@@ -1,0 +1,7 @@
+***DIALOGUE
+You approach the troll. His name is Grod: this you piece together from the nametag proclaiming "HI! MY NAME IS: grod" pinned to his vest.
+"It means 'soft and healthy soil'", he says, smiling a friendly smile at you. You don't really care but you smile awkwardly in return anyway. You feel like a dickhead.
+Grod continues, "What can I do for you today, my friend?"
+***CHOICES
+troll_insult:"Oh, fuck you."
+troll_let_me_past:"I'd like to get past, please."

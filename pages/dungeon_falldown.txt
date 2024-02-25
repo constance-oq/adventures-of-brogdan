@@ -1,0 +1,4 @@
+***DIALOGUE
+By the time you figure out which way is up it's been almost 10 seconds, and you're much deeper than you thought was possible (based, of course, on your excellent body coordination, right dumbass?). In a flurry of red robing and swearing under your breath you figure out how to stand up without falling over again, and place your hands heroically on your hips. You survey your dark surroundings.
+***CHOICES
+dungeon_start:(Continue)

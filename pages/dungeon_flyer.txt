@@ -1,0 +1,14 @@
+***DIALOGUE
+THE DUNGEON (tm) !!!
+With every home purchased in Snortsville you get access to THE DUNGEON (tm) !!!, a network of tunnels and walkways built for the community.
+- Perfect for storage
+- Luxurious canals with running water*
+- Every good wizard needs a dungeon
+- Two to three cells per person
+
+* Do not under any circumstances drink the running water from the luxurious canals.
+---
+You had forgotten about this place! Well, here it is again in all its dark glory. You recognise that this is more of a sewer than a dungeon, but much like the foyer you call it a dungeon anyway. The municipality made a big fuss about how they were investing in the public when this thing was built (or refurbished, you suspect).
+Anyway, back to the stupid dungeon.
+***CHOICES
+dungeon_start:(Back to the stupid dungeon)

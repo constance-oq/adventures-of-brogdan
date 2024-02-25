@@ -1,0 +1,7 @@
+***DIALOGUE
+As you breach a clearing in the forest, your Wizard's Tower comes aview in full.
+It zigzags haphazardly from the green grass in a manner that would make lesser men worry for its structural integrity (you on the other hand have become proficient at ignoring this facet of its construction). Small rooms jut out from the side here and there and the tower wears a sharp red roof, not completely unlike your Wizard's Hat, which too zags back and forth on its journey skyward.
+At the front door are a couple of petunia flowers you've attempted to cultivate, which hug the edge of a set of circular stepping stones. Other than this the tower is a rather sordid affair, with bricks falling out, one or two windows replaced with wooden boards, and an overall lack of 'Je ne sais quoi'.
+***CHOICES
+start_middle_of_forest:Wander off into the forest.
+start_tower_foyer:What are you waiting for? Head inside.

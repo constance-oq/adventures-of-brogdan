@@ -1,0 +1,8 @@
+***DIALOGUE
+You find yourself in a brick-made tunnel, beneath a ladder shaft from which pours afternoon light. A thin stream of water runs in a canal in front of your feet, from left to right.
+Around you are innumerable piles of useless junk. Not quite garbage, trash, or refuse, but definitely junk. Half a box set of Friends, a green umbrella, a collector's edition lampshade, a rolled-up poster for some rock band you can't recognize... the list goes on. More junk floats downstream.
+From atop a nearby Macklemore cardboard stand-up slips a flyer, which flies and floats to land at your feet. He grins at you as if to say "It was 99 cents", which makes no sense whatsoever. You weren't paying that much attention during Thrift Shop.
+***CHOICES
+dungeon_flyer:Read the flyer.
+IF:HAS_LADDER_RUNG:0:dungeon_ladder_fail:Climb the ladder.
+dungeon_upstream:Wander upstream.
