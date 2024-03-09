@@ -1,0 +1,17 @@
+***DIALOGUE
+"Very well!" Grod says, and clears his throat.
+
+"There are four gnomes: A red, green, blue, and yellow gnome. They line up in a row to take a photograph. The green gnome prefers to be leftmost but will concede to the yellow gnome if asked politely. The red gnome is shy, and prefers to stand between two other gnomes, whereas the blue gnome is a lone wolf who only stands next to one gnome.  The blue and yellow gnome hate each other and will not stand next to each other. The yellow gnome and the red gnome are best friends and must stand together.
+
+"What order do the gnomes stand in?" Grod asks you.
+***CHOICES
+troll_puzzle_fail:"Oh, I know this one! Yellow, red, blue, green."
+troll_puzzle_fail:"It's yellow, green, red, blue."
+troll_puzzle_fail:"Blue-yellow-red-green."
+troll_puzzle_success:"Ah! Blue, red, yellow, then green.
+troll_puzzle_fail:"Green, yellow, red, blue."
+troll_puzzle_fail:"Bleen, grue, red, rellow."
+troll_puzzle_fail:"It has to be blue-red-green-yellow."
+troll_puzzle_fail:"Green, blue, yellow, red."
+troll_puzzle_fail:"...Purple?"
+troll_puzzle_fail:"Green yellow blue red. I think."

@@ -1,0 +1,4 @@
+***DIALOGUE
+Grod steps aside as you cross the plastic bridge, and gives you a cheeky little wave. You begrudgingly smile at him on the way past.
+***CHOICES
+dungeon_further_upstream:(Continue)

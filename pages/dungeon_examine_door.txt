@@ -1,0 +1,10 @@
+***DIALOGUE
+There are an array of plaques on the door. The largest and most central reads 'DAVID SNOPPER', with 'Associate Supervising Specialist Helper Attendant' in smaller text. Almost a hundred other plaques surround the nameplate aggressively and describe a number of municipal offices.
+"MUNICIPAL ASSOCIATION OF GARDENING"
+"MUNICIPAL ASSOCIATION OF PHONECALLS"
+"MUNICIPAL ASSOCIATION OF MUNICIPAL ASSOCIATIONS"
+And there, third column from the left on the second-bottom row:
+"MUNICIPAL ASSOCIATION OF PLANNED OBSOLESCENCE".
+***CHOICES
+dungeon_office:Enter through the door.
+dungeon_further_upstream:(Back)

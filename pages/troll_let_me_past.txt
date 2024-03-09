@@ -1,1 +1,13 @@
-i have ot make sure ur not a robot 
+***DIALOGUE
+"Ah! Yes. Well of course. I just have to make sure you're not a robot first," Grod says simply.
+"A what?" You say.
+"A robot," says Grod. "It's possible you might be a robot trying to access the premises and do something. I'll need you to solve a small puzzle before you can come through, okay?" he explains.
+"... What sort of something would a robot be doing over there?" you ask.
+"Oh, goodness knows! Awful things, no doubt! Terrible things. So I must make sure you're not a robot, or you might do these things."
+"These awful things?" you ask.
+"That's right."
+"Do you get a lot of robots down here?" you ask.
+Grod pauses to consider. "Well - no, not in particular - It's a security measure. Orders from on high and all that." he concludes.
+***CHOICES
+dungeon_upstream:"Stuff this! I'm leaving."
+troll_puzzle:"Well alright. Give me that puzzle."

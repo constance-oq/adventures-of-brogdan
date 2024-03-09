@@ -1,0 +1,7 @@
+***DIALOGUE
+"Excellent, excellent!" Grod says, beaming. "Right this way, sir."
+You sigh with relief. The plastic bridge creaks under your weight as you cross to the other side of the stream.
+***CHOICES
+dungeon_further_upstream:(Continue)
+***FLAGS
+TROLL_PUZZLE_SOLVED:1

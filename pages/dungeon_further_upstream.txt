@@ -1,0 +1,6 @@
+***DIALOGUE
+The forest of air freshener trees is now sneezingly thick. You've reached the furthest upstream point of the dungeon. Water flows from a grate inset at the base of the dead-end wall ahead of you. Downstream is Grod and the plastic bridge, and on the left wall is a nook with a door in it.
+***CHOICES
+dungeon_examine_door:Examine the door.
+dungeon_office:Enter through the door.
+dungeon_upstream:Return across the bridge.

@@ -1,0 +1,7 @@
+***DIALOGUE
+"Nope!" says Grod. "Have another crack at it."
+"... You realize there's no point to the puzzle if I can just try until I get it right, right?" you say.
+"Hm?"
+"Oh, nevermind. Sock it to me again."
+***CHOICES
+troll_puzzle:(Continue)

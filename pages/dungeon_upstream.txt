@@ -2,6 +2,6 @@
 Upstream of where you started, the dungeon takes on a minty scent. As you continue forward you enter a forest of pine-tree shaped air fresheners hanging from various plumbing and junk towers, brushing them aside as you walk forward. Soon you find your way forward blocked by a life-size Barbie Fairy Princess' Castle, the exact serial number and name of which you recall fondly from your childhood days. 
 You notice that the bridge is missing until you swivel your head 30 degrees to the right, and realize it is in fact reaching its full potential as a walkway across the canal to the other side of the tunnel. However, stood stoutly in front of the bridge is a burly troll brandishing a wooden club. His horns nearly grind against the ceiling but his terrible hunched posture saves him the trouble.
 ***CHOICES
-if:TROLL_PASSED:0:troll:Confront the troll.
-if:TROLL_PASSED:1:troll_already_passed:Confront the troll.
+if:TROLL_PUZZLE_SOLVED:0:troll:Confront the troll.
+if:TROLL_PUZZLE_SOLVED:1:troll_already_passed:Cross the bridge.
 dungeon_start:Return to the start of the dungeon.
